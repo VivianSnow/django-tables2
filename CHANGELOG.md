@@ -1,5 +1,11 @@
 # Change log
 
+## django_tables2 2.0 (unreleased)
+ - Cleaned up templates to add consistancy in what is presented accross all templates.
+ - Added bootstrap4.html template
+ - Fixed translation inconsistancies.
+ - **breaking change** removed the `template` argument to the table constructor, use `template_name` instead.
+ -
 
 ## 1.21.1 (2018-03-12)
  - Do not perform extra `COUNT()` queries for non-paginated tables. Fixes [#551](https://github.com/jieter/django-tables2/issues/551)
