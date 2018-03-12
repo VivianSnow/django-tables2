@@ -16,6 +16,7 @@ class MyTable(tables.Table):
         classes_set.add(bound_column.name)
         return classes_set
 ```
+ - `verbose_name`s derived from model fields are not passed through `title()` anymore, only the first character is converted to upper case. This follows [Django's convention for verbose field names](https://docs.djangoproject.com/en/2.0/topics/db/models/#verbose-field-names): "The convention is not to capitalize the first letter of the verbose_name. Django will automatically capitalize the first letter where it needs to." (Fixes [#475](https://github.com/jieter/django-tables2/issues/475) and [#491](https://github.com/jieter/django-tables2/issues/491))
 
 ## 1.21.1 (2018-03-12)
  - Do not perform extra `COUNT()` queries for non-paginated tables. Fixes [#551](https://github.com/jieter/django-tables2/issues/551)
